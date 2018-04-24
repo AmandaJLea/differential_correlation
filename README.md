@@ -1,4 +1,4 @@
-# differential_correlation
+# README
 
 The code provided here implements the method described in [paper info]. 
 
