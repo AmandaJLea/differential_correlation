@@ -12,4 +12,5 @@ data=read.delim('example_exp_dataset.txt')
 # individuals should be in the same order in the predictor file and the data matrix
 pred=read.delim('example_pred_dataset.txt')
 
+# diff_correlation_2grps(normalized data matrix, class assignments, name of class 1, name of class 2, should plots be produced?)
 diff_correlation_2grps(data,pred$x,'healthy','sick',plot=T)
