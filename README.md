@@ -10,6 +10,6 @@ Several key files are provided:
 
 2) functions.R is an Rscript with functions that can be loaded and applied to external datasets.
 
-3) example_functions.R is an Rscript that shows how to use the provided functions.
+3) functions_example.R is an Rscript that shows how to use the provided functions.
 
 Please contact Amanda Lea (amandalea7180@gmail.com) with any questions.
