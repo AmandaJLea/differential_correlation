@@ -132,7 +132,7 @@ return( c( cor.test( e_all_norm[pairs$V1[i],which(predictor_perm==0)] , e_all_no
 names(results_perm)<-c('cor_healthy','cor_sick','p_value')
 
 # qq-plot - should not show any enrichment of low p-values relative to a uniform distribution  
-qqplot(-log10(runif(dim(pairs)[1])),-log10(results_perm$p_value),pch=20,xlab='p-value, uniform distribution',ylab='p-value, differential correlation test',bty='n',xlim=c(0,max(-log10(results_perm$p_value))),ylim=c(0,max(-log10(results_perm$p_value))))
+qqplot(-log10(runif(dim(pairs)[1])),-log10(results_perm$p_value),pch=20,xlab='p-value, uniform distribution',ylab='p-value, differential correlation test (permuted)',bty='n',xlim=c(0,max(-log10(results_perm$p_value))),ylim=c(0,max(-log10(results_perm$p_value))))
 x=c(0,1);y=c(0,1);abline(lm(y~x),lty=2)
 
 ############
@@ -159,5 +159,5 @@ return( c( cor.test( e_all_norm[pairs$V1[i],which(predictor_perm==0)] , e_all_no
 names(results_perm2)<-c('cor_healthy','cor_sick','p_value')
 
 # qq-plot - should not show any enrichment of low p-values relative to a uniform distribution  
-qqplot(-log10(runif(dim(pairs)[1])),-log10(results_perm2$p_value),pch=20,xlab='p-value, uniform distribution',ylab='p-value, differential correlation test',bty='n',xlim=c(0,max(-log10(results_perm2$p_value))),ylim=c(0,max(-log10(results_perm2$p_value))))
+qqplot(-log10(runif(dim(pairs)[1])),-log10(results_perm2$p_value),pch=20,xlab='p-value, uniform distribution',ylab='p-value, differential correlation test (permuted)',bty='n',xlim=c(0,max(-log10(results_perm2$p_value))),ylim=c(0,max(-log10(results_perm2$p_value))))
 x=c(0,1);y=c(0,1);abline(lm(y~x),lty=2)
