@@ -92,6 +92,7 @@ names(results)<-c('cor_healthy','cor_sick','p_value')
 par(mfrow=c(2,2))
 
 # volcano plot
+# remember we simulated a loss of correlation in sick individuals, so this plot should be lopsided
 library(qvalue)
 results$qvalue<-qvalue(results$p_value)$qvalues
 plot(results$cor_healthy - results$cor_sick,-log10(results$p_value),bty='n',col=as.factor(results$qvalue<0.05),xlab='difference in Spearman correlation (healthy-sick)',ylab='-log10, p-value')
