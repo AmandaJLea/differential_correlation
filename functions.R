@@ -29,7 +29,6 @@ write.table(results,'results.txt',row.names=F,quote=F,sep='\t')
 
 if(plot==T) {
 print('plotting results')
-par(mfrow=c(2,2))
 
 # qq-plot
 qqplot(-log10(runif(dim(pairs)[1])),-log10(results$p_value),pch=20,xlab='p-value, uniform distribution',ylab='p-value, differential correlation test',bty='n',xlim=c(0,max(-log10(results$p_value))),ylim=c(0,max(-log10(results$p_value))))
