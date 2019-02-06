@@ -10,7 +10,7 @@ Note that in the manuscript referenced above, we describe two versions of CILP. 
 
 Several files are provided:
 
-1) example.R is an Rscript that will simulate gene expression data for two groups of individuals, those that are healthy and those that are sick. The pairwise correlation coefficient is decreased in sick individuals relative to healthy individuals for a subset of genes pairs. The script walks through the process of data normalization and implementing a test for differential correlation.
+1) example.R is an Rscript that will simulate gene expression data for two groups of individuals, those that are healthy and those that are sick. The pairwise correlation coefficient is decreased in sick individuals relative to healthy individuals for a subset of genes pairs. The script walks through the process of data normalization, implementing CILP, and checking null expectations. It is strongly reccomended that any new user walks through this script first, before attempting to implement CILP on their own data.
 
 2) functions.R is an Rscript with functions that can be loaded and applied to external datasets.
 
