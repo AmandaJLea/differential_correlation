@@ -81,6 +81,7 @@ tmp1<-(e_all_norm[pairs$V1[i],])
 tmp2<-(e_all_norm[pairs$V2[i],])
 # here, a linear model is used to test for differences in correlation between groups; however, any number of other statistical methods (e.g., linear models with additional covariates or linear mixed effects models) could be used in the same framework
 # to use an alternate statistical approach, extract the product matrix and use it as the outcome variable in another type of statistical model  
+# note that this code also returns the Spearman correlation coefficient calculated within the healthy and sick class; this is purely for convenience and visualization, and to provide an 'easy' to interpret measure of effect size 
 return( c( cor.test( e_all_norm[pairs$V1[i],which(predictor==0)] , e_all_norm[pairs$V2[i],which(predictor==0)] ,method='spearman')$estimate, cor.test( e_all_norm[pairs$V1[i],which(predictor==1)] , e_all_norm[pairs$V2[i],which(predictor==1)] ,method='spearman')$estimate, summary(lm( scale(tmp1*tmp2) ~ predictor))$coefficients[2,4]))
 }))))
 names(results)<-c('cor_healthy','cor_sick','p_value')
